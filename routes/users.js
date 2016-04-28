@@ -19,7 +19,9 @@ router.get('/', function(req, res, next) {
   var region = 'kr';
   var version = '/v1.4';
   var api = '/summoner/by-name/'
-  var key = "?api_key=" + ""; 
+  var key = "?api_key=" + "";
+  
+  var hello = "te"; 
   
   request(prefix + region + version + api + id + key, function(err, response, body){
     if (!err && response.statusCode == 200){
