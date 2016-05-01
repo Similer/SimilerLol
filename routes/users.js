@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
   var region = 'kr';
   var version = '/v1.4';
   var api = '/summoner/by-name/'
-  var key = "?api_key=" + "";
+  var key = "?api_key=" + "5d6592e7-834f-49c2-bb11-4135a8626d7a";
   
   var hello = "te"; 
   
@@ -28,7 +28,8 @@ router.get('/', function(req, res, next) {
       var dd = JSON.parse(body);
       var user = dd.similer;
       
-      res.send(body[id][summonerLevel]);    
+      
+      res.send(user[id]);    
     }
   });
    

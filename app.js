@@ -56,5 +56,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
+global.__base = __dirname + '\\';
 
 module.exports = app;
