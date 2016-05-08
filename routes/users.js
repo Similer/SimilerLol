@@ -28,8 +28,9 @@ router.get('/', function(req, res, next) {
       var dd = JSON.parse(body);
       var user = dd.similer;
       
+      res.render('userInfo', {userName : user});
       
-      res.send(user[id]);    
+      // res.send(user[id]);    
     }
   });
    
