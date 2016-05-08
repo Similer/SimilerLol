@@ -2,5 +2,15 @@ extends layout
 
 block content
   h1= title
-  p #{userName.id}
+  
+  // icon
+  img(src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/#{userInfo.profileIconId}.png", height="150" width="150")
+  
+  p name : #{userInfo.name}
+  p summonerLevel : #{userInfo.summonerLevel}
+  p id : #{userInfo.id}
+  p revisionDate : #{userInfo.revisionDate}
+  
+  
+  
   

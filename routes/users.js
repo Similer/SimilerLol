@@ -25,12 +25,10 @@ router.get('/', function(req, res, next) {
   
   request(prefix + region + version + api + id + key, function(err, response, body){
     if (!err && response.statusCode == 200){
-      var dd = JSON.parse(body);
-      var user = dd.similer;
+      var body = JSON.parse(body);
+      var userInfo = body[id];
       
-      res.render('userInfo', {userName : user});
-      
-      // res.send(user[id]);    
+      res.render('userInfo', {userInfo : userInfo});
     }
   });
    

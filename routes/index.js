@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Express' });
   
   if (req.url == '/')
-    res.sendFile(__base + 'public/html/main.html');
+    res.render('main');
   else{
     res.redirect('users' + req.url);
   }
